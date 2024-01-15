@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package completion;
+
+service Runner {
+  rpc Completion (CompletionRequest) returns (CompletionResponse);
+}
+
+message CompletionRequest {
+  string message = 1;
+}
+
+message CompletionResponse {
+  string message = 1;
+}
