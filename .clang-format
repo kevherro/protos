@@ -1,0 +1,56 @@
+# .clang-format configuration for Protocol Buffers
+
+Language: Proto
+BasedOnStyle: Google
+
+# Indentation settings
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+
+# Bracket alignment
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+AlignEscapedNewlines: Left
+AlignOperands: true
+AlignTrailingComments: true
+
+# Breaks and wrapping
+AllowShortFunctionsOnASingleLine: None
+AlwaysBreakAfterReturnType: None
+BinPackArguments: false
+BinPackParameters: false
+BreakBeforeBraces: Custom
+BraceWrapping:
+    AfterEnum: false
+    AfterClass: false
+    AfterStruct: false
+    AfterFunction: true
+    AfterNamespace: false
+    AfterUnion: false
+    AfterExternBlock: false
+    BeforeCatch: true
+    BeforeElse: true
+    IndentBraces: false
+ColumnLimit: 80
+
+# Spaces
+SpaceAfterCStyleCast: true
+SpacesBeforeTrailingComments: 2
+SpacesInAngles: false
+SpacesInContainerLiterals: true
+SpacesInCStyleCastParentheses: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+
+# Ordering of includes
+IncludeBlocks: Preserve
+IncludeCategories:
+  - Regex:           '^<ext/.*\.hpp>'
+    Priority:        2
+  - Regex:           '^<.*\.h>'
+    Priority:        1
+  - Regex:           '.*'
+    Priority:        3
+SortIncludes:    true
