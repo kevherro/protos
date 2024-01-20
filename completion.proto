@@ -17,7 +17,7 @@ syntax = "proto3";
 
 package completion;
 
-service Runner
+service Generator
 {
     rpc Completion(CompletionRequest) returns (CompletionResponse);
 }
@@ -25,10 +25,10 @@ service Runner
 message CompletionRequest
 {
     string model = 1;
-    string message = 2;
+    string prompt = 2;
 }
 
 message CompletionResponse
 {
-    string message = 1;
+    string result = 1;
 }
